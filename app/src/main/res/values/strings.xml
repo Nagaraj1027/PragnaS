@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PragnaS</string>
+    <string name="hello1">Hello1</string>
+    <string name="hello2">Hello2</string>
+    <string name="btn1">Button1</string>
+    <string name="btn2">Button2</string>
+    <string name="btn3">Button3</string>
+
+</resources>
