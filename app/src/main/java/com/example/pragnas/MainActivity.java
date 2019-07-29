@@ -1,14 +1,18 @@
 package com.example.pragnas;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.pragnas.explicitintent.IntentActivity;
+import com.example.pragnas.implicitIntent.ImplicitIntent;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn1, btn2, btn3;
+    Button btnExplicitIntent, btn2, btn3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +22,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     void initViews() {
-        btn1 = findViewById(R.id.btn1);
+        btnExplicitIntent = findViewById(R.id.btnExplicitIntent);
         btn2 = findViewById(R.id.btn2);
         btn3 = findViewById(R.id.btn3);
 
-        btn1.setOnClickListener(this);
+        btnExplicitIntent.setOnClickListener(this);
         btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);
 /*
@@ -51,15 +55,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btn1:
-                Toast.makeText(getApplicationContext(), "Button1 is clicked", Toast.LENGTH_LONG).show();
+            case R.id.btnExplicitIntent:
+                //Toast.makeText(getApplicationContext(), "Button1 is clicked", Toast.LENGTH_LONG).show();
+                gotoExplicitIntent();
                 break;
             case R.id.btn2:
-                Toast.makeText(getApplicationContext(), "Button2 Clicked", Toast.LENGTH_LONG).show();
+                gotoImplicitIntent();
+                //Toast.makeText(getApplicationContext(), "Button2 Clicked", Toast.LENGTH_LONG).show();
                 break;
             case R.id.btn3:
                 Toast.makeText(getApplicationContext(), "Button3 Clicked", Toast.LENGTH_LONG).show();
                 break;
         }
+    }
+
+    void gotoExplicitIntent() {
+        Intent to_explicit = new Intent(MainActivity.this, IntentActivity.class);
+        startActivity(to_explicit);
+    }
+
+    void gotoImplicitIntent() {
+        Intent to_implicit = new Intent(MainActivity.this, ImplicitIntent.class);
+        startActivity(to_implicit);
     }
 }

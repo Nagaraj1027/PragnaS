@@ -7,22 +7,23 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btn1"
+        android:id="@+id/btnExplicitIntent"
         style="@style/tvStyle"
-        android:layout_margin="50dp"
+        android:layout_margin="30dp"
         android:background="@color/colorPrimaryDark"
-        android:text="@string/btn1"
+        android:padding="10dp"
+        android:text="GOTO EXPLICIT INTENT"
         android:textColor="@color/white"
         android:textSize="30sp" />
 
     <Button
         android:id="@+id/btn2"
         style="@style/tvStyle"
-        android:layout_below="@+id/btn1"
+        android:layout_below="@+id/btnExplicitIntent"
         android:layout_centerInParent="true"
         android:layout_margin="50dp"
         android:background="@color/colorPrimaryDark"
-        android:text="@string/btn2"
+        android:text="GOTO IMPLICIT INTENT"
         android:textColor="@color/white"
         android:textSize="30sp" />
 
