@@ -38,4 +38,16 @@
         android:textColor="@color/white"
         android:textSize="30sp" />
 
+    <Button
+        android:id="@+id/btnGotoActLifecycle"
+        style="@style/tvStyle"
+        android:layout_below="@+id/btn3"
+        android:layout_centerInParent="true"
+        android:layout_margin="50dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="GOTO ACTIVITY LIFE CYCLE"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+
 </RelativeLayout>

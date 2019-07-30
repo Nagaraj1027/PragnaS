@@ -7,12 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.pragnas.activitylifecycle.ActivityA;
 import com.example.pragnas.explicitintent.IntentActivity;
 import com.example.pragnas.implicitIntent.ImplicitIntent;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnExplicitIntent, btn2, btn3;
+    Button btnExplicitIntent, btn2, btn3, btnGotoActLifecycle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +26,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnExplicitIntent = findViewById(R.id.btnExplicitIntent);
         btn2 = findViewById(R.id.btn2);
         btn3 = findViewById(R.id.btn3);
+        btnGotoActLifecycle = findViewById(R.id.btnGotoActLifecycle);
+
 
         btnExplicitIntent.setOnClickListener(this);
         btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);
+        btnGotoActLifecycle.setOnClickListener(this);
+
 /*
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +71,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn3:
                 Toast.makeText(getApplicationContext(), "Button3 Clicked", Toast.LENGTH_LONG).show();
                 break;
+
+            case R.id.btnGotoActLifecycle:
+                // Toast.makeText(getApplicationContext(), "Button3 Clicked", Toast.LENGTH_LONG).show();
+                gotoActivityLifeCycle();
+                break;
         }
     }
 
@@ -77,5 +87,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     void gotoImplicitIntent() {
         Intent to_implicit = new Intent(MainActivity.this, ImplicitIntent.class);
         startActivity(to_implicit);
+    }
+
+    void gotoActivityLifeCycle() {
+        Intent to_activitya = new Intent(MainActivity.this, ActivityA.class);
+        startActivity(to_activitya);
     }
 }
