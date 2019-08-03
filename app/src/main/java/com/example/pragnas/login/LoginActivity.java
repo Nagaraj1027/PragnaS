@@ -40,8 +40,11 @@ public class LoginActivity extends AppCompatActivity {
                 if (!(username.getText().toString().isEmpty()) && !(password.getText().toString().isEmpty())) {
 
                     ApplicationClass.putUserNameIntoPreferences(username.getText().toString());
+                    ApplicationClass.putPasswordIntoPreferences(username.getText().toString());
+                    ApplicationClass.putLoginStatusIntoPreferences(true);
 
                     Log.e("username From Pref", ApplicationClass.getUserNameFromSharedPreferences());
+                    Log.e("password From Pref", ApplicationClass.getPasswordFromSharedPreferences());
 
                     Intent to_relative = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(to_relative);
@@ -49,4 +52,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }
