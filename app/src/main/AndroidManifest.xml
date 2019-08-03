@@ -12,14 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".staticfragment.StaticFragmentsActivity"></activity>
         <activity android:name=".activitylifecycle.ActivityB" />
         <activity android:name=".activitylifecycle.ActivityA" />
         <activity android:name=".implicitIntent.ImplicitIntent" />
         <activity android:name=".explicitintent.IntentActivity" />
         <activity android:name=".login.LoginActivity" />
         <activity android:name=".MainActivity" />
-
-        //Testing GitPull
         <activity android:name=".splashscreen.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

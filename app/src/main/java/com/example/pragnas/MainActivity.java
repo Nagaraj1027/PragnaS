@@ -10,10 +10,11 @@ import android.widget.Toast;
 import com.example.pragnas.activitylifecycle.ActivityA;
 import com.example.pragnas.explicitintent.IntentActivity;
 import com.example.pragnas.implicitIntent.ImplicitIntent;
+import com.example.pragnas.staticfragment.StaticFragmentsActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnExplicitIntent, btn2, btn3, btnGotoActLifecycle;
+    Button btnExplicitIntent, btn2, btn3, btnGotoActLifecycle, btnGotoStaticFragmnts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +28,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn2 = findViewById(R.id.btn2);
         btn3 = findViewById(R.id.btn3);
         btnGotoActLifecycle = findViewById(R.id.btnGotoActLifecycle);
+        btnGotoStaticFragmnts = findViewById(R.id.btnGotoStaticFragmnts);
 
 
         btnExplicitIntent.setOnClickListener(this);
         btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);
         btnGotoActLifecycle.setOnClickListener(this);
+        btnGotoStaticFragmnts.setOnClickListener(this);
 
 /*
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -76,6 +79,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // Toast.makeText(getApplicationContext(), "Button3 Clicked", Toast.LENGTH_LONG).show();
                 gotoActivityLifeCycle();
                 break;
+            case R.id.btnGotoStaticFragmnts:
+                // Toast.makeText(getApplicationContext(), "Button3 Clicked", Toast.LENGTH_LONG).show();
+                gotoStaticFragmnts();
+                break;
+
+
         }
     }
 
@@ -93,4 +102,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent to_activitya = new Intent(MainActivity.this, ActivityA.class);
         startActivity(to_activitya);
     }
+
+    void gotoStaticFragmnts() {
+        Intent to_staticFragmnts = new Intent(MainActivity.this, StaticFragmentsActivity.class);
+        startActivity(to_staticFragmnts);
+    }
+
 }

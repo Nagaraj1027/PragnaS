@@ -9,7 +9,7 @@
     <Button
         android:id="@+id/btnExplicitIntent"
         style="@style/tvStyle"
-        android:layout_margin="30dp"
+        android:layout_margin="20dp"
         android:background="@color/colorPrimaryDark"
         android:padding="10dp"
         android:text="GOTO EXPLICIT INTENT"
@@ -21,7 +21,7 @@
         style="@style/tvStyle"
         android:layout_below="@+id/btnExplicitIntent"
         android:layout_centerInParent="true"
-        android:layout_margin="50dp"
+        android:layout_margin="20dp"
         android:background="@color/colorPrimaryDark"
         android:text="GOTO IMPLICIT INTENT"
         android:textColor="@color/white"
@@ -32,7 +32,7 @@
         style="@style/tvStyle"
         android:layout_below="@+id/btn2"
         android:layout_centerInParent="true"
-        android:layout_margin="50dp"
+        android:layout_margin="20dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/btn3"
         android:textColor="@color/white"
@@ -43,9 +43,20 @@
         style="@style/tvStyle"
         android:layout_below="@+id/btn3"
         android:layout_centerInParent="true"
-        android:layout_margin="50dp"
+        android:layout_margin="20dp"
         android:background="@color/colorPrimaryDark"
         android:text="GOTO ACTIVITY LIFE CYCLE"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btnGotoStaticFragmnts"
+        style="@style/tvStyle"
+        android:layout_below="@+id/btnGotoActLifecycle"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="GOTO STATIC FRAGMENT"
         android:textColor="@color/white"
         android:textSize="30sp" />
 
