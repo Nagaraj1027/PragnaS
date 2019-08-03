@@ -39,18 +39,9 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (!(username.getText().toString().isEmpty()) && !(password.getText().toString().isEmpty())) {
 
-                    Log.e("un",username.getText().toString());
-
-                    Log.e("pw",password.getText().toString());
-
-/*
                     ApplicationClass.putUserNameIntoPreferences(username.getText().toString());
-*/
 
-                 /* ApplicationClass.putPasswordIntoPreferences(password.getText().toString());*/
-
-                 /*   Log.e("username From Pref", ApplicationClass.getUserNameFromSharedPreferences());*/
-                    /*Log.e("password From Pref", ApplicationClass.getPasswordFromSharedPreferences());*/
+                    Log.e("username From Pref", ApplicationClass.getUserNameFromSharedPreferences());
 
                     Intent to_relative = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(to_relative);
