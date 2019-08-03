@@ -8,6 +8,8 @@ public class ApplicationClass extends Application {
 
     static SharedPreferences sharedPreferences;
     static SharedPreferences.Editor editor;
+    static String name;
+    static String password;
 
     @Override
     public void onCreate() {
@@ -17,13 +19,24 @@ public class ApplicationClass extends Application {
         editor = sharedPreferences.edit();
     }
 
-  public   static void putUserNameIntoPreferences(String name) {
+   public  static void putUserNameIntoPreferences(String name) {
         editor.putString("USERNAME", name);
         editor.commit();
     }
 
+    /*public static void putPasswordIntoPreferences(String password) {
+        editor.putString("PASSWORD", password);
+        editor.commit();
+    }*/
+
    public static String getUserNameFromSharedPreferences() {
-        String name = sharedPreferences.getString("USERNAME", null);
+         name = sharedPreferences.getString("USERNAME", null);
         return name;
     }
+
+    /*public static String getPasswordFromSharedPreferences() {
+        password = sharedPreferences.getString("PASSWORD",null);
+        return password;
+    }*/
+
 }
