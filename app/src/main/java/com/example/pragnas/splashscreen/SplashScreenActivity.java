@@ -25,7 +25,6 @@ public class SplashScreenActivity extends AppCompatActivity {
         }, SPLASH_TIME_OUT);
     }
 
-
     void checkLoginStatus() {
         if (ApplicationClass.getLoginStatusFromSharedPreferences()) {
             //goto HomeScreen
