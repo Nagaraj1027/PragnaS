@@ -55,6 +55,17 @@
         android:textSize="30sp" />
 
     <Button
+        android:id="@+id/btnGotoStaticFragmnts"
+        style="@style/tvStyle"
+        android:layout_below="@+id/btnGotoActLifecycle"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="GOTO STATIC FRAGMENT"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <Button
         android:id="@+id/btnForAlertDialog"
         style="@style/tvStyle"
         android:layout_below="@+id/btnGotoActLifecycle"
