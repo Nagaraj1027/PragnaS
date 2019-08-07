@@ -18,6 +18,7 @@
         <activity android:name=".implicitIntent.ImplicitIntent" />
         <activity android:name=".explicitintent.IntentActivity" />
         <activity android:name=".login.LoginActivity" />
+        <activity android:name=".dynamicfragments.FragmenTabsActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".splashscreen.SplashScreenActivity">
             <intent-filter>
