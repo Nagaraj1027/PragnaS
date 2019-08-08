@@ -3,12 +3,17 @@ package com.example.pragnas;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.pragnas.activitylifecycle.ActivityA;
 import com.example.pragnas.dynamicfragments.FragmenTabsActivity;
+import com.example.pragnas.alertdialog.ExampleDialog;
 import com.example.pragnas.explicitintent.IntentActivity;
 import com.example.pragnas.implicitIntent.ImplicitIntent;
 import com.example.pragnas.staticfragment.StaticFragmentsActivity;
@@ -16,6 +21,7 @@ import com.example.pragnas.staticfragment.StaticFragmentsActivity;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btnExplicitIntent, btn2, btn3, btnGotoActLifecycle, btnGotoStaticFragmnts, btnFragmntsWithTabs;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnGotoActLifecycle = findViewById(R.id.btnGotoActLifecycle);
         btnGotoStaticFragmnts = findViewById(R.id.btnGotoStaticFragmnts);
         btnFragmntsWithTabs = findViewById(R.id.btnFragmntsWithTabs);
+        btnForAlertDialog = findViewById(R.id.btnForAlertDialog);
+        toolbar = findViewById(R.id.toolbar);
 
 
         btnExplicitIntent.setOnClickListener(this);
@@ -39,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnGotoActLifecycle.setOnClickListener(this);
         btnGotoStaticFragmnts.setOnClickListener(this);
         btnFragmntsWithTabs.setOnClickListener(this);
+        btnForAlertDialog.setOnClickListener(this);
+        setSupportActionBar(toolbar);
 
 /*
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -92,7 +102,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
 
+
+            case R.id.btnForAlertDialog:
+                showAlertDialog();
+                break;
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater mMenuInflator = getMenuInflater();
+        mMenuInflator.inflate(R.menu.my_menu, menu);
+        return true;
     }
 
     void gotoExplicitIntent() {
@@ -120,4 +141,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(to_staticFragmnts);
     }
 
+
+    void showAlertDialog() {
+        ExampleDialog exampleDialog = new ExampleDialog();
+        exampleDialog.show(getSupportFragmentManager(), "xyz");
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_setting:
+                Toast.makeText(getApplicationContext(), "you clicked settings menu", Toast.LENGTH_LONG).show();
+                break;
+
+            case R.id.action_about_us:
+                Toast.makeText(getApplicationContext(), "you clicked About us menu", Toast.LENGTH_LONG).show();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
