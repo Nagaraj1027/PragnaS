@@ -1,21 +1,29 @@
 package com.example.pragnas.dynamicfragments;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.pragnas.R;
+import com.example.pragnas.dynamicfragments.model.User;
+
+import java.util.ArrayList;
 
 public class FragmentOne extends Fragment {
 
-   /* ListView listView;
+    ListView listView;
     DisplayData populateListView;
-    ArrayList<User> al_users;*/
+    ArrayList<User> al_users;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -67,15 +75,13 @@ public class FragmentOne extends Fragment {
         View view = inflater.inflate(R.layout.fragment_fragment_one, container, false);
         createList(view);
         //return inflater.inflate(R.layout.fragment_fragment_one, container, false);
-     /*   populateListView = new DisplayData(al_users, getActivity(), 1);
-        listView.setAdapter(populateListView);*/
         return view;
 
     }
 
     void createList(View view) {
 
-      /*  listView = view.findViewById(R.id.listView);
+        listView = view.findViewById(R.id.listView);
 
         al_users = new ArrayList<>();
 
@@ -86,12 +92,12 @@ public class FragmentOne extends Fragment {
             al_users.add(user);
         }
 
-        populateListView = new DisplayData(al_users, getActivity(), 1);
-        listView.setAdapter(populateListView);*/
+        populateListView = new DisplayData();
+        listView.setAdapter(populateListView);
     }
 
 
-    /*public class DisplayData extends BaseAdapter {
+    public class DisplayData extends BaseAdapter {
         LayoutInflater inflater;
 
         @Override
@@ -130,9 +136,9 @@ public class FragmentOne extends Fragment {
         public int getCount() {
             return al_users.size();
         }
-    }*/
+    }
 
-   /* private class MyViewHolder {
+    private class MyViewHolder {
         ImageView img;
         TextView tv;
 
@@ -141,9 +147,9 @@ public class FragmentOne extends Fragment {
             img = (ImageView) view.findViewById(R.id.img);
             tv = (TextView) view.findViewById(R.id.tv);
         }
-    }*/
+    }
 
-  /*  @Override
+    @Override
     public void onStart() {
         super.onStart();
     }
@@ -177,5 +183,5 @@ public class FragmentOne extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-    }*/
+    }
 }

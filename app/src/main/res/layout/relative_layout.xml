@@ -76,7 +76,6 @@
         android:textColor="@color/white"
         android:textSize="30sp" />
 
-        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btnFragmntsWithTabs"
@@ -86,6 +85,16 @@
         android:layout_margin="20dp"
         android:background="@color/colorPrimaryDark"
         android:text="GOTO FRAGMENT TABS"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+    <Button
+        android:id="@+id/btnListview"
+        style="@style/tvStyle"
+        android:layout_below="@+id/btnFragmntsWithTabs"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="GOTO LISTVIEW"
         android:textColor="@color/white"
         android:textSize="20sp" />
 

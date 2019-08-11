@@ -1,4 +1,4 @@
-package com.example.omniprojecttochaya.model;
+package com.example.pragnas.dynamicfragments.model;
 
 import java.io.Serializable;
 

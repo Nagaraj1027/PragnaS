@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-
-
 import com.example.pragnas.R;
 import com.example.pragnas.dynamicfragments.adapter.CreateDynamicFragments;
 
@@ -43,7 +41,7 @@ public class FragmenTabsActivity extends AppCompatActivity {
 
     private void setupTabNames(int number) {
         for (int i = 0; i < number; i++) {
-            tabLayout.getTabAt(i).setText("TAB" + i + 1);
+            tabLayout.getTabAt(i).setText("TAB" + i);
         }
     }
 }

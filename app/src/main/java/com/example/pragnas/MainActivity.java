@@ -16,11 +16,12 @@ import com.example.pragnas.dynamicfragments.FragmenTabsActivity;
 import com.example.pragnas.alertdialog.ExampleDialog;
 import com.example.pragnas.explicitintent.IntentActivity;
 import com.example.pragnas.implicitIntent.ImplicitIntent;
+import com.example.pragnas.listview.ListviewActivity;
 import com.example.pragnas.staticfragment.StaticFragmentsActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnExplicitIntent, btn2, btn3, btnGotoActLifecycle, btnGotoStaticFragmnts, btnFragmntsWithTabs;
+    Button btnExplicitIntent, btn2, btn3, btnGotoActLifecycle, btnForAlertDialog, btnGotoStaticFragmnts, btnFragmntsWithTabs, btnListview;
     Toolbar toolbar;
 
     @Override
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnFragmntsWithTabs = findViewById(R.id.btnFragmntsWithTabs);
         btnForAlertDialog = findViewById(R.id.btnForAlertDialog);
         toolbar = findViewById(R.id.toolbar);
-
+        btnListview = findViewById(R.id.btnListview);
 
         btnExplicitIntent.setOnClickListener(this);
         btn2.setOnClickListener(this);
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnFragmntsWithTabs.setOnClickListener(this);
         btnForAlertDialog.setOnClickListener(this);
         setSupportActionBar(toolbar);
+        btnListview.setOnClickListener(this);
 
 /*
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -102,10 +104,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
 
-
             case R.id.btnForAlertDialog:
                 showAlertDialog();
                 break;
+            case R.id.btnListview:
+                gotoListView();
+                break;
+
         }
     }
 
@@ -139,6 +144,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     void gotoDynamicFragmnts() {
         Intent to_staticFragmnts = new Intent(MainActivity.this, FragmenTabsActivity.class);
         startActivity(to_staticFragmnts);
+    }
+
+    void gotoListView() {
+        Intent to_lisview= new Intent(MainActivity.this, ListviewActivity.class);
+        startActivity(to_lisview);
     }
 
 
