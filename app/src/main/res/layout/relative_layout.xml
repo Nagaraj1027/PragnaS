@@ -13,10 +13,10 @@
     <Button
         android:id="@+id/btnExplicitIntent"
         style="@style/tvStyle"
+        android:layout_below="@+id/toolbar"
         android:layout_margin="10dp"
         android:background="@color/colorPrimaryDark"
         android:padding="10dp"
-        android:layout_below="@+id/toolbar"
         android:text="GOTO EXPLICIT INTENT"
         android:textColor="@color/white"
         android:textSize="20sp" />
@@ -87,6 +87,7 @@
         android:text="GOTO FRAGMENT TABS"
         android:textColor="@color/white"
         android:textSize="20sp" />
+
     <Button
         android:id="@+id/btnListview"
         style="@style/tvStyle"
@@ -97,5 +98,17 @@
         android:text="GOTO LISTVIEW"
         android:textColor="@color/white"
         android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnRecyclerview"
+        style="@style/tvStyle"
+        android:layout_below="@+id/btnListview"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="GOTO RECYCLERVIEW"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
 
 </RelativeLayout>

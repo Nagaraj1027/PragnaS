@@ -1,5 +1,6 @@
 package com.example.pragnas.listview;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +11,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.pragnas.R;
+import com.example.pragnas.listview.adapter.ListAdapter;
+import com.example.pragnas.listview.holder.ViewHolder;
 import com.example.pragnas.listview.model.UserDetails;
 
 import java.util.ArrayList;
@@ -27,7 +30,10 @@ public class ListviewActivity extends AppCompatActivity {
         createArraylist();
         createUserArraylist();
 
-        ListAdapter listAdapter = new ListAdapter();
+       /* ListAdapter listAdapter = new ListAdapter();
+        listView.setAdapter(listAdapter);*/
+
+        ListAdapter listAdapter = new ListAdapter(al_users, ListviewActivity.this);
         listView.setAdapter(listAdapter);
     }
 
@@ -45,25 +51,31 @@ public class ListviewActivity extends AppCompatActivity {
 
         for (int i = 0; i < 5; i++) {
             UserDetails userDetails = new UserDetails();
-                userDetails.setUserName("Hyderabad " + i);
-                userDetails.setUserPhone("95505875406 " + i);
+            userDetails.setUserName("Hyderabad " + i);
+            userDetails.setUserPhone("95505875406 " + i);
             al_users.add(userDetails);
         }
     }
 
-    public class ListAdapter extends BaseAdapter {
+   /* public class ListAdapter extends BaseAdapter {
         TextView tvName, tvPhone;
 
         @Override
         public View getView(int position, View view, ViewGroup viewGroup) {
-            LayoutInflater layoutInflater = getLayoutInflater();
-            View v = layoutInflater.inflate(R.layout.row_simple_listview, null);
-            tvName = (TextView) v.findViewById(R.id.tvName);
-            tvPhone = (TextView) v.findViewById(R.id.tvPhone);
+            ViewHolder viewHolder;
+            if (view == null) {
+                LayoutInflater layoutInflater = getLayoutInflater();
+                view = layoutInflater.inflate(R.layout.row_simple_listview, null);
 
-            tvName.setText(al_users.get(position).getUserName() );
-            tvPhone.setText(al_users.get(position).getUserPhone() );
-            return v;
+                viewHolder = new ViewHolder(view);
+                view.setTag(viewHolder);
+            } else {
+                viewHolder = (ViewHolder) view.getTag();
+            }
+
+            viewHolder.tvName.setText(al_users.get(position).getUserName());
+            viewHolder.tvPhone.setText(al_users.get(position).getUserPhone());
+            return view;
         }
 
         @Override
@@ -80,5 +92,5 @@ public class ListviewActivity extends AppCompatActivity {
         public long getItemId(int i) {
             return 0;
         }
-    }
+    }*/
 }

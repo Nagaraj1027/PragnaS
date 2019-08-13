@@ -17,11 +17,12 @@ import com.example.pragnas.alertdialog.ExampleDialog;
 import com.example.pragnas.explicitintent.IntentActivity;
 import com.example.pragnas.implicitIntent.ImplicitIntent;
 import com.example.pragnas.listview.ListviewActivity;
+import com.example.pragnas.recyclerview.RecyclerViewExample;
 import com.example.pragnas.staticfragment.StaticFragmentsActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnExplicitIntent, btn2, btn3, btnGotoActLifecycle, btnForAlertDialog, btnGotoStaticFragmnts, btnFragmntsWithTabs, btnListview;
+    Button btnExplicitIntent, btn2, btn3, btnGotoActLifecycle, btnForAlertDialog, btnGotoStaticFragmnts, btnFragmntsWithTabs, btnListview,btnRecyclerview;
     Toolbar toolbar;
 
     @Override
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnForAlertDialog = findViewById(R.id.btnForAlertDialog);
         toolbar = findViewById(R.id.toolbar);
         btnListview = findViewById(R.id.btnListview);
+        btnRecyclerview = findViewById(R.id.btnRecyclerview);
 
         btnExplicitIntent.setOnClickListener(this);
         btn2.setOnClickListener(this);
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnForAlertDialog.setOnClickListener(this);
         setSupportActionBar(toolbar);
         btnListview.setOnClickListener(this);
+        btnRecyclerview.setOnClickListener(this);
 
 /*
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +113,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnListview:
                 gotoListView();
                 break;
-
+            case R.id.btnRecyclerview:
+                gotoRecyclerVeiw();
+                break;
         }
     }
 
@@ -150,7 +155,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent to_lisview= new Intent(MainActivity.this, ListviewActivity.class);
         startActivity(to_lisview);
     }
-
+    void gotoRecyclerVeiw() {
+        Intent to_recycler= new Intent(MainActivity.this, RecyclerViewExample.class);
+        startActivity(to_recycler);
+    }
 
     void showAlertDialog() {
         ExampleDialog exampleDialog = new ExampleDialog();
