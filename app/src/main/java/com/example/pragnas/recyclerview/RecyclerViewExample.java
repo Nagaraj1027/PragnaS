@@ -9,6 +9,8 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -50,7 +52,6 @@ public class RecyclerViewExample extends AppCompatActivity {
         createList();
 
         dragAndDrop();
-
         initSwipe();
     }
 
@@ -74,9 +75,8 @@ public class RecyclerViewExample extends AppCompatActivity {
 
 
         //rv.setHasFixedSize(true);
-        LinearLayoutManager llm = new LinearLayoutManager(RecyclerViewExample.this);
+        //LinearLayoutManager llm = new LinearLayoutManager(RecyclerViewExample.this);
         rv.setLayoutManager(new LinearLayoutManager(RecyclerViewExample.this, LinearLayoutManager.VERTICAL, false));
-
         // rv.setHasFixedSize(true);
 
       /*  RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 3);
@@ -135,7 +135,7 @@ public class RecyclerViewExample extends AppCompatActivity {
             TextView tvName;
             TextView tvPhone;
             ImageView img;
-            LinearLayout llRecyclerview;
+            RelativeLayout llRecyclerview;
 
             private MyViewHolder(View view) {
                 super(view);
