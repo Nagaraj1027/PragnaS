@@ -135,7 +135,7 @@ public class RecyclerViewExample extends AppCompatActivity {
             TextView tvName;
             TextView tvPhone;
             ImageView img;
-            RelativeLayout llRecyclerview;
+            LinearLayout llRecyclerview;
 
             private MyViewHolder(View view) {
                 super(view);
