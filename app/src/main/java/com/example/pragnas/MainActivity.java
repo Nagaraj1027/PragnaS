@@ -18,11 +18,14 @@ import com.example.pragnas.explicitintent.IntentActivity;
 import com.example.pragnas.implicitIntent.ImplicitIntent;
 import com.example.pragnas.listview.ListviewActivity;
 import com.example.pragnas.recyclerview.RecyclerViewExample;
+import com.example.pragnas.sensors.ProximitySensorActivity;
 import com.example.pragnas.staticfragment.StaticFragmentsActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnExplicitIntent, btn2, btn3, btnGotoActLifecycle, btnForAlertDialog, btnGotoStaticFragmnts, btnFragmntsWithTabs, btnListview,btnRecyclerview;
+    Button btnExplicitIntent, btn2, btn3, btnGotoActLifecycle,
+            btnForAlertDialog, btnGotoStaticFragmnts, btnFragmntsWithTabs,
+            btnListview, btnRecyclerview, btnProximity;
     Toolbar toolbar;
 
     @Override
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         toolbar = findViewById(R.id.toolbar);
         btnListview = findViewById(R.id.btnListview);
         btnRecyclerview = findViewById(R.id.btnRecyclerview);
+        btnProximity = findViewById(R.id.btnProximity);
 
         btnExplicitIntent.setOnClickListener(this);
         btn2.setOnClickListener(this);
@@ -54,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setSupportActionBar(toolbar);
         btnListview.setOnClickListener(this);
         btnRecyclerview.setOnClickListener(this);
+        btnProximity.setOnClickListener(this);
 
 /*
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -105,6 +110,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // Toast.makeText(getApplicationContext(), "Button3 Clicked", Toast.LENGTH_LONG).show();
                 gotoDynamicFragmnts();
                 break;
+            case R.id.btnProximity:
+                // Toast.makeText(getApplicationContext(), "Button3 Clicked", Toast.LENGTH_LONG).show();
+                gotoButtonProximity();
+                break;
 
 
             case R.id.btnForAlertDialog:
@@ -152,13 +161,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     void gotoListView() {
-        Intent to_lisview= new Intent(MainActivity.this, ListviewActivity.class);
+        Intent to_lisview = new Intent(MainActivity.this, ListviewActivity.class);
         startActivity(to_lisview);
     }
+
     void gotoRecyclerVeiw() {
-        Intent to_recycler= new Intent(MainActivity.this, RecyclerViewExample.class);
+        Intent to_recycler = new Intent(MainActivity.this, RecyclerViewExample.class);
         startActivity(to_recycler);
     }
+
+    void gotoButtonProximity() {
+        Intent to_recycler = new Intent(MainActivity.this, ProximitySensorActivity.class);
+        startActivity(to_recycler);
+    }
+
 
     void showAlertDialog() {
         ExampleDialog exampleDialog = new ExampleDialog();

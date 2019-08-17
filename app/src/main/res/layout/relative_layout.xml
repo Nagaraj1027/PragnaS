@@ -1,114 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/btnExplicitIntent"
-        style="@style/tvStyle"
-        android:layout_below="@+id/toolbar"
-        android:layout_margin="10dp"
-        android:background="@color/colorPrimaryDark"
-        android:padding="10dp"
-        android:text="GOTO EXPLICIT INTENT"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
 
-    <Button
-        android:id="@+id/btn2"
-        style="@style/tvStyle"
-        android:layout_below="@+id/btnExplicitIntent"
-        android:layout_centerInParent="true"
-        android:layout_margin="10dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="GOTO IMPLICIT INTENT"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
+        <Button
+            android:id="@+id/btnExplicitIntent"
+            style="@style/tvStyle"
+            android:layout_below="@+id/toolbar"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:padding="10dp"
+            android:text="GOTO EXPLICIT INTENT"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/btn3"
-        style="@style/tvStyle"
-        android:layout_below="@+id/btn2"
-        android:layout_centerInParent="true"
-        android:layout_margin="10dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Toast message"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
+        <Button
+            android:id="@+id/btn2"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnExplicitIntent"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO IMPLICIT INTENT"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/btnGotoActLifecycle"
-        style="@style/tvStyle"
-        android:layout_below="@+id/btn3"
-        android:layout_centerInParent="true"
-        android:layout_margin="10dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="GOTO ACTIVITY LIFE CYCLE"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
+        <Button
+            android:id="@+id/btn3"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btn2"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Toast message"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/btnGotoStaticFragmnts"
-        style="@style/tvStyle"
-        android:layout_below="@+id/btnGotoActLifecycle"
-        android:layout_centerInParent="true"
-        android:layout_margin="20dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="GOTO STATIC FRAGMENT"
-        android:textColor="@color/white"
-        android:textSize="30sp" />
+        <Button
+            android:id="@+id/btnGotoActLifecycle"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btn3"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO ACTIVITY LIFE CYCLE"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/btnForAlertDialog"
-        style="@style/tvStyle"
-        android:layout_below="@+id/btnGotoActLifecycle"
-        android:layout_centerInParent="true"
-        android:layout_margin="10dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="show alert dialog"
-        android:textColor="@color/white"
-        android:textSize="30sp" />
+        <Button
+            android:id="@+id/btnGotoStaticFragmnts"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnGotoActLifecycle"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO STATIC FRAGMENT"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
-
-    <Button
-        android:id="@+id/btnFragmntsWithTabs"
-        style="@style/tvStyle"
-        android:layout_below="@+id/btnGotoStaticFragmnts"
-        android:layout_centerInParent="true"
-        android:layout_margin="20dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="GOTO FRAGMENT TABS"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
-
-    <Button
-        android:id="@+id/btnListview"
-        style="@style/tvStyle"
-        android:layout_below="@+id/btnFragmntsWithTabs"
-        android:layout_centerInParent="true"
-        android:layout_margin="20dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="GOTO LISTVIEW"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
-
-    <Button
-        android:id="@+id/btnRecyclerview"
-        style="@style/tvStyle"
-        android:layout_below="@+id/btnListview"
-        android:layout_centerInParent="true"
-        android:layout_margin="20dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="GOTO RECYCLERVIEW"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
+        <Button
+            android:id="@+id/btnForAlertDialog"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnGotoStaticFragmnts"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="show alert dialog"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/btnFragmntsWithTabs"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnForAlertDialog"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO FRAGMENT TABS"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnListview"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnFragmntsWithTabs"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO LISTVIEW"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnRecyclerview"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnListview"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO RECYCLERVIEW"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnProximity"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnRecyclerview"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO PROXIMITY SENSOR"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+</ScrollView>

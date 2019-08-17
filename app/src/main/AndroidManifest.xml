@@ -29,6 +29,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".recyclerview.RecyclerViewExample" />
+        <activity android:name=".sensors.ProximitySensorActivity" />
     </application>
 
 </manifest>
