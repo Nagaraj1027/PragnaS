@@ -12,11 +12,13 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.pragnas.activitylifecycle.ActivityA;
+import com.example.pragnas.database.DataActivity;
 import com.example.pragnas.dynamicfragments.FragmenTabsActivity;
 import com.example.pragnas.alertdialog.ExampleDialog;
 import com.example.pragnas.explicitintent.IntentActivity;
 import com.example.pragnas.implicitIntent.ImplicitIntent;
 import com.example.pragnas.listview.ListviewActivity;
+import com.example.pragnas.radiobuttons.RadioButtonsActivity;
 import com.example.pragnas.recyclerview.RecyclerViewExample;
 import com.example.pragnas.sensors.ProximitySensorActivity;
 import com.example.pragnas.staticfragment.StaticFragmentsActivity;
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button btnExplicitIntent, btn2, btn3, btnGotoActLifecycle,
             btnForAlertDialog, btnGotoStaticFragmnts, btnFragmntsWithTabs,
-            btnListview, btnRecyclerview, btnProximity;
+            btnListview, btnRecyclerview, btnProximity, radioButton,btnSqliteDB;
     Toolbar toolbar;
 
     @Override
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnListview = findViewById(R.id.btnListview);
         btnRecyclerview = findViewById(R.id.btnRecyclerview);
         btnProximity = findViewById(R.id.btnProximity);
+        radioButton = findViewById(R.id.radioButton);
+        btnSqliteDB = findViewById(R.id.btnSqliteDB);
 
         btnExplicitIntent.setOnClickListener(this);
         btn2.setOnClickListener(this);
@@ -59,6 +63,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnListview.setOnClickListener(this);
         btnRecyclerview.setOnClickListener(this);
         btnProximity.setOnClickListener(this);
+        radioButton.setOnClickListener(this);
+        btnSqliteDB.setOnClickListener(this);
 
 /*
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -125,6 +131,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnRecyclerview:
                 gotoRecyclerVeiw();
                 break;
+            case R.id.radioButton:
+                // Toast.makeText(getApplicationContext(), "Button3 Clicked", Toast.LENGTH_LONG).show();
+                gotoRadioButton();
+                break;
+            case R.id.btnSqliteDB:
+                // Toast.makeText(getApplicationContext(), "Button3 Clicked", Toast.LENGTH_LONG).show();
+                gotoDataBase();
+                break;
+
         }
     }
 
@@ -180,6 +195,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ExampleDialog exampleDialog = new ExampleDialog();
         exampleDialog.show(getSupportFragmentManager(), "xyz");
     }
+    void gotoRadioButton() {
+        Intent to_recycler = new Intent(MainActivity.this, RadioButtonsActivity.class);
+        startActivity(to_recycler);
+    }
+    void gotoDataBase() {
+        Intent to_recycler = new Intent(MainActivity.this, DataActivity.class);
+        startActivity(to_recycler);
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

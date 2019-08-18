@@ -125,5 +125,28 @@
             android:textColor="@color/white"
             android:textSize="20sp" />
 
+        <Button
+            android:id="@+id/radioButton"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnProximity"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO RADIO BUTTON"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnSqliteDB"
+            style="@style/tvStyle"
+            android:layout_below="@+id/radioButton"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO DATABASE BUTTON"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
     </RelativeLayout>
 </ScrollView>
