@@ -3,6 +3,7 @@
     package="com.example.pragnas">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".appclass.ApplicationClass"
@@ -24,6 +25,9 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".database.DataActivity" />
         <activity android:name=".database.DisplayDatabaseData" />
+        <activity android:name=".jsonparser.JSONReaderActivity" />
+        <activity android:name=".volleyserevercalls.VolleyActivity" />
+        <activity android:name=".retrofit.RetrofitActivity" />
         <activity android:name=".splashscreen.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

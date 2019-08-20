@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "211760068856",
+    "firebase_url": "https://omniprojecttochaya.firebaseio.com",
+    "project_id": "omniprojecttochaya",
+    "storage_bucket": "omniprojecttochaya.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211760068856:android:d99169fbe6d56b47",
+        "android_client_info": {
+          "package_name": "com.example.omniprojecttochaya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211760068856-egffksdu9cpnmvs42qg26l59amumcofv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFu2jVfP86V1Vm9-d7j9Jf0pftPD74UoY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -11,23 +11,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.pragnas.retrofit.RetrofitActivity;
 import com.example.pragnas.activitylifecycle.ActivityA;
 import com.example.pragnas.database.DataActivity;
 import com.example.pragnas.dynamicfragments.FragmenTabsActivity;
 import com.example.pragnas.alertdialog.ExampleDialog;
 import com.example.pragnas.explicitintent.IntentActivity;
 import com.example.pragnas.implicitIntent.ImplicitIntent;
+import com.example.pragnas.jsonparser.JSONReaderActivity;
 import com.example.pragnas.listview.ListviewActivity;
 import com.example.pragnas.radiobuttons.RadioButtonsActivity;
 import com.example.pragnas.recyclerview.RecyclerViewExample;
 import com.example.pragnas.sensors.ProximitySensorActivity;
 import com.example.pragnas.staticfragment.StaticFragmentsActivity;
+import com.example.pragnas.volleyserevercalls.VolleyActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btnExplicitIntent, btn2, btn3, btnGotoActLifecycle,
             btnForAlertDialog, btnGotoStaticFragmnts, btnFragmntsWithTabs,
-            btnListview, btnRecyclerview, btnProximity, radioButton,btnSqliteDB;
+            btnListview, btnRecyclerview, btnProximity, radioButton, btnSqliteDB, btnJSONPaerser, btnVolleyLibrary,btnGotoRetrofit;
     Toolbar toolbar;
 
     @Override
@@ -51,6 +54,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnProximity = findViewById(R.id.btnProximity);
         radioButton = findViewById(R.id.radioButton);
         btnSqliteDB = findViewById(R.id.btnSqliteDB);
+        btnJSONPaerser = findViewById(R.id.btnJSONPaerser);
+        btnVolleyLibrary = findViewById(R.id.btnVolleyLibrary);
+        btnGotoRetrofit = findViewById(R.id.btnGotoRetrofit);
 
         btnExplicitIntent.setOnClickListener(this);
         btn2.setOnClickListener(this);
@@ -65,6 +71,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnProximity.setOnClickListener(this);
         radioButton.setOnClickListener(this);
         btnSqliteDB.setOnClickListener(this);
+        btnJSONPaerser.setOnClickListener(this);
+        btnVolleyLibrary.setOnClickListener(this);
+        btnGotoRetrofit.setOnClickListener(this);
 
 /*
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -139,6 +148,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // Toast.makeText(getApplicationContext(), "Button3 Clicked", Toast.LENGTH_LONG).show();
                 gotoDataBase();
                 break;
+            case R.id.btnJSONPaerser:
+                // Toast.makeText(getApplicationContext(), "Button3 Clicked", Toast.LENGTH_LONG).show();
+                gotoJSONParser();
+                break;
+            case R.id.btnVolleyLibrary:
+                // Toast.makeText(getApplicationContext(), "Button3 Clicked", Toast.LENGTH_LONG).show();
+                gotoVolleyLibrary();
+                break;
+            case R.id.btnGotoRetrofit:
+                // Toast.makeText(getApplicationContext(), "Button3 Clicked", Toast.LENGTH_LONG).show();
+                gotoRetrofitLibrary();
+                break;
 
         }
     }
@@ -195,12 +216,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ExampleDialog exampleDialog = new ExampleDialog();
         exampleDialog.show(getSupportFragmentManager(), "xyz");
     }
+
     void gotoRadioButton() {
         Intent to_recycler = new Intent(MainActivity.this, RadioButtonsActivity.class);
         startActivity(to_recycler);
     }
+
     void gotoDataBase() {
         Intent to_recycler = new Intent(MainActivity.this, DataActivity.class);
+        startActivity(to_recycler);
+    }
+    void gotoJSONParser() {
+        Intent to_recycler = new Intent(MainActivity.this, JSONReaderActivity.class);
+        startActivity(to_recycler);
+    }
+
+    void gotoVolleyLibrary() {
+        Intent to_recycler = new Intent(MainActivity.this, VolleyActivity.class);
+        startActivity(to_recycler);
+    }
+    void gotoRetrofitLibrary() {
+        Intent to_recycler = new Intent(MainActivity.this, RetrofitActivity.class);
         startActivity(to_recycler);
     }
 

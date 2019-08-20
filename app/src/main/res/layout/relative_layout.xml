@@ -18,67 +18,61 @@
             android:id="@+id/btnExplicitIntent"
             style="@style/tvStyle"
             android:layout_below="@+id/toolbar"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
             android:background="@color/colorPrimaryDark"
-            android:padding="10dp"
             android:text="GOTO EXPLICIT INTENT"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btn2"
             style="@style/tvStyle"
             android:layout_below="@+id/btnExplicitIntent"
             android:layout_centerInParent="true"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
             android:background="@color/colorPrimaryDark"
             android:text="GOTO IMPLICIT INTENT"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btn3"
             style="@style/tvStyle"
             android:layout_below="@+id/btn2"
             android:layout_centerInParent="true"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
             android:background="@color/colorPrimaryDark"
             android:text="Toast message"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btnGotoActLifecycle"
             style="@style/tvStyle"
             android:layout_below="@+id/btn3"
             android:layout_centerInParent="true"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
             android:background="@color/colorPrimaryDark"
             android:text="GOTO ACTIVITY LIFE CYCLE"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btnGotoStaticFragmnts"
             style="@style/tvStyle"
             android:layout_below="@+id/btnGotoActLifecycle"
             android:layout_centerInParent="true"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
             android:background="@color/colorPrimaryDark"
             android:text="GOTO STATIC FRAGMENT"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btnForAlertDialog"
             style="@style/tvStyle"
             android:layout_below="@+id/btnGotoStaticFragmnts"
             android:layout_centerInParent="true"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
             android:background="@color/colorPrimaryDark"
             android:text="show alert dialog"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textColor="@color/white" />
 
 
         <Button
@@ -86,67 +80,90 @@
             style="@style/tvStyle"
             android:layout_below="@+id/btnForAlertDialog"
             android:layout_centerInParent="true"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
             android:background="@color/colorPrimaryDark"
             android:text="GOTO FRAGMENT TABS"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btnListview"
             style="@style/tvStyle"
             android:layout_below="@+id/btnFragmntsWithTabs"
             android:layout_centerInParent="true"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
             android:background="@color/colorPrimaryDark"
             android:text="GOTO LISTVIEW"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btnRecyclerview"
             style="@style/tvStyle"
             android:layout_below="@+id/btnListview"
             android:layout_centerInParent="true"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
             android:background="@color/colorPrimaryDark"
             android:text="GOTO RECYCLERVIEW"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btnProximity"
             style="@style/tvStyle"
             android:layout_below="@+id/btnRecyclerview"
             android:layout_centerInParent="true"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
             android:background="@color/colorPrimaryDark"
             android:text="GOTO PROXIMITY SENSOR"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/radioButton"
             style="@style/tvStyle"
             android:layout_below="@+id/btnProximity"
             android:layout_centerInParent="true"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
             android:background="@color/colorPrimaryDark"
             android:text="GOTO RADIO BUTTON"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/btnSqliteDB"
             style="@style/tvStyle"
             android:layout_below="@+id/radioButton"
             android:layout_centerInParent="true"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
             android:background="@color/colorPrimaryDark"
             android:text="GOTO DATABASE BUTTON"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textColor="@color/white" />
 
+        <Button
+            android:id="@+id/btnJSONPaerser"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnSqliteDB"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO JSON PARSER"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnVolleyLibrary"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnJSONPaerser"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO VOLLEY LIBRARY"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnGotoRetrofit"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnVolleyLibrary"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO Retrofit LIBRARY"
+            android:textColor="@color/white" />
 
     </RelativeLayout>
 </ScrollView>
