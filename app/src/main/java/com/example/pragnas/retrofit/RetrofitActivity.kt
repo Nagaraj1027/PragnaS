@@ -25,6 +25,7 @@ class RetrofitActivity : AppCompatActivity() {
         getUsers()
     }
 
+
     fun getUsers() {
 
         var retrofit: Retrofit = Retrofit.Builder()

@@ -4,23 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activitylifecycle.ActivityA">
-
+    tools:context=".launchmodes.standardmode.StandardModeA">
+    
     <Button
-        android:id="@+id/btnGotoActA"
-        style="@style/tvStyle"
-        android:layout_centerInParent="true"
-        android:layout_margin="50dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="GOTO ACTIVITY A"
-        android:textColor="@color/white"
-        android:textSize="30sp" />
-
-    <TextView
+        android:id="@+id/btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnGotoActA"
-        android:gravity="center"
-        android:text="In Activity B"
-        android:textSize="30sp" />
+        android:background="@color/colorPrimary"
+        android:layout_centerInParent="true"
+        android:layout_margin="50dp"
+        android:textColor="@color/white" />
+
 </RelativeLayout>

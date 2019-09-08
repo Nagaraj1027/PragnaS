@@ -16,7 +16,7 @@ public class ActivityB extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_b);
+        setContentView(R.layout.activity_lifecycle);
 
         Log.e("Activity B in onCreate ", "Activity B in onCreate");
         btnGotoActA = (Button) findViewById(R.id.btnGotoActA);

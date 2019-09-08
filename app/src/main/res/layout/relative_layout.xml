@@ -165,5 +165,55 @@
             android:text="GOTO Retrofit LIBRARY"
             android:textColor="@color/white" />
 
+        <Button
+            android:id="@+id/btn"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnVolleyLibrary"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO Retrofit LIBRARY"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnGotoStandardMode"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btn"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO STANDARD MODE"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnGotoSingleTop"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnGotoStandardMode"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO SINGLE TOP"
+            android:textColor="@color/white" />
+
+
+        <Button
+            android:id="@+id/btnGotoSingleTask"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnGotoSingleTop"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO SINGLE TASK"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnSingleInstanceMode"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnGotoSingleTask"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO SINGLE INSTANCE"
+            android:textColor="@color/white" />
     </RelativeLayout>
 </ScrollView>

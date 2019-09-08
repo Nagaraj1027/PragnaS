@@ -63,7 +63,6 @@ public class DataAdapter extends BaseAdapter {
         tvFirstName.setText(al.get(position).getFirst_name());
         tyvLastName.setText(al.get(position).getLast_name());
 
-
         RequestOptions options = new RequestOptions()
                 .placeholder(R.drawable.avatarupload)
                 .error(R.drawable.avatarupload);

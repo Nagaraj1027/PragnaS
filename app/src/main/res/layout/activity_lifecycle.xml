@@ -3,16 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".launchmodes.standardmode.StandardModeA">
+    
+    <Button
+        android:id="@+id/btnGotoActA"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
         android:layout_centerInParent="true"
+        android:text="GOTO ACTIVITY A"
         android:layout_margin="50dp"
-        android:text="calling API using Retrofit"
-        android:textColor="@color/colorPrimary" />
-
+        android:textColor="@color/white" />
 
 </RelativeLayout>

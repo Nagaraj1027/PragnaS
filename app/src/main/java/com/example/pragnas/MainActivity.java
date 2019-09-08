@@ -11,6 +11,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.pragnas.launchmodes.singleinstance.SingeInstanceA;
+import com.example.pragnas.launchmodes.singletask.SingleTaskA;
+import com.example.pragnas.launchmodes.singletop.SingleTopA;
+import com.example.pragnas.launchmodes.standardmode.StandardModeA;
 import com.example.pragnas.retrofit.RetrofitActivity;
 import com.example.pragnas.activitylifecycle.ActivityA;
 import com.example.pragnas.database.DataActivity;
@@ -30,7 +34,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button btnExplicitIntent, btn2, btn3, btnGotoActLifecycle,
             btnForAlertDialog, btnGotoStaticFragmnts, btnFragmntsWithTabs,
-            btnListview, btnRecyclerview, btnProximity, radioButton, btnSqliteDB, btnJSONPaerser, btnVolleyLibrary,btnGotoRetrofit;
+            btnListview, btnRecyclerview, btnProximity, radioButton, btnSqliteDB,
+            btnJSONPaerser, btnVolleyLibrary, btnGotoRetrofit, btnGotoStandardMode,
+            btnGotoSingleTop,
+            btnGotoSingleTask,
+            btnSingleInstanceMode;
     Toolbar toolbar;
 
     @Override
@@ -57,6 +65,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnJSONPaerser = findViewById(R.id.btnJSONPaerser);
         btnVolleyLibrary = findViewById(R.id.btnVolleyLibrary);
         btnGotoRetrofit = findViewById(R.id.btnGotoRetrofit);
+        btnGotoStandardMode = findViewById(R.id.btnGotoStandardMode);
+        btnGotoSingleTop = findViewById(R.id.btnGotoSingleTop);
+        btnGotoSingleTask = findViewById(R.id.btnGotoSingleTask);
+        btnSingleInstanceMode = findViewById(R.id.btnSingleInstanceMode);
+
 
         btnExplicitIntent.setOnClickListener(this);
         btn2.setOnClickListener(this);
@@ -74,6 +87,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnJSONPaerser.setOnClickListener(this);
         btnVolleyLibrary.setOnClickListener(this);
         btnGotoRetrofit.setOnClickListener(this);
+        btnGotoStandardMode.setOnClickListener(this);
+        btnGotoSingleTop.setOnClickListener(this);
+        btnGotoSingleTask.setOnClickListener(this);
+        btnSingleInstanceMode.setOnClickListener(this);
 
 /*
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -161,6 +178,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 gotoRetrofitLibrary();
                 break;
 
+            case R.id.btnGotoStandardMode:
+                gotoAActivityStandardMode();
+                break;
+
+            case R.id.btnGotoSingleTop:
+                gotoAActivitySingleTopdMode();
+                break;
+            case R.id.btnGotoSingleTask:
+                gotoAActivitySingleTaskMode();
+                break;
+
+            case R.id.btnSingleInstanceMode:
+                gotoAActivitySingleInstancedMode();
+                break;
         }
     }
 
@@ -226,6 +257,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent to_recycler = new Intent(MainActivity.this, DataActivity.class);
         startActivity(to_recycler);
     }
+
     void gotoJSONParser() {
         Intent to_recycler = new Intent(MainActivity.this, JSONReaderActivity.class);
         startActivity(to_recycler);
@@ -235,9 +267,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent to_recycler = new Intent(MainActivity.this, VolleyActivity.class);
         startActivity(to_recycler);
     }
+
     void gotoRetrofitLibrary() {
         Intent to_recycler = new Intent(MainActivity.this, RetrofitActivity.class);
         startActivity(to_recycler);
+    }
+
+    void gotoAActivityStandardMode() {
+        Intent to_explicitAct = new Intent(MainActivity.this, StandardModeA.class);
+        startActivity(to_explicitAct);
+    }
+
+    void gotoAActivitySingleTopdMode() {
+        Intent to_explicitAct = new Intent(MainActivity.this, SingleTopA.class);
+        startActivity(to_explicitAct);
+    }
+
+    void gotoAActivitySingleTaskMode() {
+        Intent to_explicitAct = new Intent(MainActivity.this, SingleTaskA.class);
+        startActivity(to_explicitAct);
+    }
+
+    void gotoAActivitySingleInstancedMode() {
+        Intent to_explicitAct = new Intent(MainActivity.this, SingeInstanceA.class);
+        startActivity(to_explicitAct);
     }
 
 
