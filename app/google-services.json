@@ -1,39 +1,37 @@
 {
   "project_info": {
-    "project_number": "211760068856",
-    "firebase_url": "https://omniprojecttochaya.firebaseio.com",
-    "project_id": "omniprojecttochaya",
-    "storage_bucket": "omniprojecttochaya.appspot.com"
+    "project_number": "322588810157",
+    "firebase_url": "https://pragnas-79161.firebaseio.com",
+    "project_id": "pragnas-79161",
+    "storage_bucket": "pragnas-79161.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:211760068856:android:d99169fbe6d56b47",
+        "mobilesdk_app_id": "1:322588810157:android:ca74d68bef26ce7d3b9f24",
         "android_client_info": {
-          "package_name": "com.example.omniprojecttochaya"
+          "package_name": "com.example.pragnas"
         }
       },
       "oauth_client": [
         {
-          "client_id": "211760068856-egffksdu9cpnmvs42qg26l59amumcofv.apps.googleusercontent.com",
+          "client_id": "322588810157-f2v77nib3e7vbk1spm775oajbrcq9olu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCFu2jVfP86V1Vm9-d7j9Jf0pftPD74UoY"
+          "current_key": "AIzaSyDO1TD105Z0HxVLL0jEOCD2EQaTWoEsfRQ"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322588810157-f2v77nib3e7vbk1spm775oajbrcq9olu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

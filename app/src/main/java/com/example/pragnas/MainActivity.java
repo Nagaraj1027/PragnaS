@@ -15,6 +15,7 @@ import com.example.pragnas.launchmodes.singleinstance.SingeInstanceA;
 import com.example.pragnas.launchmodes.singletask.SingleTaskA;
 import com.example.pragnas.launchmodes.singletop.SingleTopA;
 import com.example.pragnas.launchmodes.standardmode.StandardModeA;
+import com.example.pragnas.notificationsFcm.NotificationActivity;
 import com.example.pragnas.retrofit.RetrofitActivity;
 import com.example.pragnas.activitylifecycle.ActivityA;
 import com.example.pragnas.database.DataActivity;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             btnJSONPaerser, btnVolleyLibrary, btnGotoRetrofit, btnGotoStandardMode,
             btnGotoSingleTop,
             btnGotoSingleTask,
-            btnSingleInstanceMode;
+            btnSingleInstanceMode,btnNotifications;
     Toolbar toolbar;
 
     @Override
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnGotoSingleTop = findViewById(R.id.btnGotoSingleTop);
         btnGotoSingleTask = findViewById(R.id.btnGotoSingleTask);
         btnSingleInstanceMode = findViewById(R.id.btnSingleInstanceMode);
+        btnNotifications = findViewById(R.id.btnNotifications);
 
 
         btnExplicitIntent.setOnClickListener(this);
@@ -91,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnGotoSingleTop.setOnClickListener(this);
         btnGotoSingleTask.setOnClickListener(this);
         btnSingleInstanceMode.setOnClickListener(this);
+        btnNotifications.setOnClickListener(this);
 
 /*
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -192,6 +195,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnSingleInstanceMode:
                 gotoAActivitySingleInstancedMode();
                 break;
+            case R.id.btnNotifications:
+                gotoNotifications();
+                break;
         }
     }
 
@@ -290,6 +296,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     void gotoAActivitySingleInstancedMode() {
         Intent to_explicitAct = new Intent(MainActivity.this, SingeInstanceA.class);
+        startActivity(to_explicitAct);
+    }
+    void gotoNotifications() {
+        Intent to_explicitAct = new Intent(MainActivity.this, NotificationActivity.class);
         startActivity(to_explicitAct);
     }
 

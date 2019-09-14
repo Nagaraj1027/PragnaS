@@ -38,7 +38,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!(username.getText().toString().isEmpty()) && !(password.getText().toString().isEmpty())) {
-
                     ApplicationClass.putUserNameIntoPreferences(username.getText().toString());
                     ApplicationClass.putPasswordIntoPreferences(username.getText().toString());
                     ApplicationClass.putLoginStatusIntoPreferences(true);

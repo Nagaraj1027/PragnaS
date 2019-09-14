@@ -22,6 +22,7 @@
         <activity android:name=".explicitintent.IntentActivity" />
         <activity android:name=".login.LoginActivity" />
         <activity android:name=".dynamicfragments.FragmenTabsActivity" />
+        <activity android:name=".notificationsFcm.NotificationActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".database.DataActivity" />
         <activity android:name=".database.DisplayDatabaseData" />
@@ -67,6 +68,18 @@
         <activity android:name=".launchmodes.singleinstance.SingeInstanceD"
             android:launchMode="singleInstance"/>
         <activity android:name=".launchmodes.singleinstance.SingeInstanceE"/>
+
+        <service android:name=".notificationsFcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- [END firebase_service] -->
+        <!-- [START firebase_iid_service] -->
+        <service android:name=".notificationsFcm.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
 
     </application>
 

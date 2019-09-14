@@ -215,5 +215,14 @@
             android:background="@color/colorPrimaryDark"
             android:text="GOTO SINGLE INSTANCE"
             android:textColor="@color/white" />
+        <Button
+            android:id="@+id/btnNotifications"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnSingleInstanceMode"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO NOTIFICATIONS"
+            android:textColor="@color/white" />
     </RelativeLayout>
 </ScrollView>
