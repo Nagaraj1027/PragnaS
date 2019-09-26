@@ -30,10 +30,12 @@ public class SplashScreenActivity extends AppCompatActivity {
             //goto HomeScreen
             Intent to_relative = new Intent(SplashScreenActivity.this, MainActivity.class);
             startActivity(to_relative);
+            finish();
         } else {
             //goto LOgin
             Intent to_relative = new Intent(SplashScreenActivity.this, LoginActivity.class);
             startActivity(to_relative);
+            finish();
         }
     }
 }

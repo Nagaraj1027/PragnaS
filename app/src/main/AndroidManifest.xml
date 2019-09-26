@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".appclass.ApplicationClass"
@@ -13,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".radiobuttons.RadioButtonsActivity"/>
+        <activity android:name=".contentproviders.ContentProviderActivity" />
+        <activity android:name=".radiobuttons.RadioButtonsActivity" />
         <activity android:name=".listview.ListviewActivity" />
         <activity android:name=".staticfragment.StaticFragmentsActivity" />
         <activity android:name=".activitylifecycle.ActivityB" />
@@ -37,37 +42,32 @@
             </intent-filter>
         </activity>
         <activity android:name=".recyclerview.RecyclerViewExample" />
-        <activity android:name=".sensors.ProximitySensorActivity" />
-
-        <!-- Standard mode activities -->
+        <activity android:name=".sensors.ProximitySensorActivity" /> <!-- Standard mode activities -->
         <activity android:name=".launchmodes.standardmode.StandardModeA" />
-        <activity android:name=".launchmodes.standardmode.StandardModeB"
+        <activity
+            android:name=".launchmodes.standardmode.StandardModeB"
             android:launchMode="standard" />
         <activity android:name=".launchmodes.standardmode.StandardModeC" />
-        <activity android:name=".launchmodes.standardmode.StandardModeD" />
-
-
-        <!-- Single Top mode activities -->
+        <activity android:name=".launchmodes.standardmode.StandardModeD" /> <!-- Single Top mode activities -->
         <activity android:name=".launchmodes.singletop.SingleTopA" />
         <activity android:name=".launchmodes.singletop.SingleTopB" />
         <activity android:name=".launchmodes.singletop.SingleTopC" />
-        <activity android:name=".launchmodes.singletop.SingleTopD"
-            android:launchMode="singleTop" />
-
-        <!-- Single Task mode activities -->
+        <activity
+            android:name=".launchmodes.singletop.SingleTopD"
+            android:launchMode="singleTop" /> <!-- Single Task mode activities -->
         <activity android:name=".launchmodes.singletask.SingleTaskA" />
-        <activity android:name=".launchmodes.singletask.SingleTaskB"
+        <activity
+            android:name=".launchmodes.singletask.SingleTaskB"
             android:launchMode="singleTask" />
         <activity android:name=".launchmodes.singletask.SingleTaskC" />
-        <activity android:name=".launchmodes.singletask.SingleTaskD" />
-
-        <!-- Single Instance mode activities -->
+        <activity android:name=".launchmodes.singletask.SingleTaskD" /> <!-- Single Instance mode activities -->
         <activity android:name=".launchmodes.singleinstance.SingeInstanceA" />
         <activity android:name=".launchmodes.singleinstance.SingeInstanceB" />
         <activity android:name=".launchmodes.singleinstance.SingeInstanceC" />
-        <activity android:name=".launchmodes.singleinstance.SingeInstanceD"
-            android:launchMode="singleInstance"/>
-        <activity android:name=".launchmodes.singleinstance.SingeInstanceE"/>
+        <activity
+            android:name=".launchmodes.singleinstance.SingeInstanceD"
+            android:launchMode="singleInstance" />
+        <activity android:name=".launchmodes.singleinstance.SingeInstanceE" />
 
         <service android:name=".notificationsFcm.MyFirebaseMessagingService">
             <intent-filter>
@@ -80,7 +80,6 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-
     </application>
 
 </manifest>

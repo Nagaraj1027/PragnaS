@@ -224,5 +224,15 @@
             android:background="@color/colorPrimaryDark"
             android:text="GOTO NOTIFICATIONS"
             android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnContentProviders"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnNotifications"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO CONTENT PROVIDERS"
+            android:textColor="@color/white" />
     </RelativeLayout>
 </ScrollView>

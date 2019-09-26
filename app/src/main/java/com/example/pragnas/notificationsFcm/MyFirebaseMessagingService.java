@@ -83,6 +83,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         notificationManager.notify((int) System.currentTimeMillis() /* ID of notification */, notificationBuilder.build());
     }
+
     private NotificationManager notifManager;
     /*public void createNotification(String aMessage, Context context) {
         final int NOTIFY_ID = 0; // ID of notification

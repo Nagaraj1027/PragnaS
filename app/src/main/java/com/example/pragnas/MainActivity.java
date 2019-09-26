@@ -1,5 +1,6 @@
 package com.example.pragnas;
 
+import android.content.ContentProvider;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.pragnas.contentproviders.ContentProviderActivity;
 import com.example.pragnas.launchmodes.singleinstance.SingeInstanceA;
 import com.example.pragnas.launchmodes.singletask.SingleTaskA;
 import com.example.pragnas.launchmodes.singletop.SingleTopA;
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             btnJSONPaerser, btnVolleyLibrary, btnGotoRetrofit, btnGotoStandardMode,
             btnGotoSingleTop,
             btnGotoSingleTask,
-            btnSingleInstanceMode,btnNotifications;
+            btnSingleInstanceMode,btnNotifications,btnContentProviders;
     Toolbar toolbar;
 
     @Override
@@ -71,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnGotoSingleTask = findViewById(R.id.btnGotoSingleTask);
         btnSingleInstanceMode = findViewById(R.id.btnSingleInstanceMode);
         btnNotifications = findViewById(R.id.btnNotifications);
+        btnContentProviders = findViewById(R.id.btnContentProviders);
 
 
         btnExplicitIntent.setOnClickListener(this);
@@ -94,6 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnGotoSingleTask.setOnClickListener(this);
         btnSingleInstanceMode.setOnClickListener(this);
         btnNotifications.setOnClickListener(this);
+        btnContentProviders.setOnClickListener(this);
 
 /*
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -197,6 +201,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnNotifications:
                 gotoNotifications();
+                break;
+
+            case R.id.btnContentProviders:
+                gotoContentProviders();
                 break;
         }
     }
@@ -302,6 +310,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent to_explicitAct = new Intent(MainActivity.this, NotificationActivity.class);
         startActivity(to_explicitAct);
     }
+    void gotoContentProviders() {
+        Intent to_explicitAct = new Intent(MainActivity.this, ContentProviderActivity.class);
+        startActivity(to_explicitAct);
+    }
+
 
 
     @Override
