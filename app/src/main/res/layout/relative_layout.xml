@@ -234,5 +234,15 @@
             android:background="@color/colorPrimaryDark"
             android:text="GOTO CONTENT PROVIDERS"
             android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnRetrofitUsingJava"
+            style="@style/tvStyle"
+            android:layout_below="@+id/btnContentProviders"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="GOTO BUTTON RETROFIT"
+            android:textColor="@color/white" />
     </RelativeLayout>
 </ScrollView>

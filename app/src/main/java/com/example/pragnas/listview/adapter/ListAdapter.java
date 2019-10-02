@@ -43,7 +43,6 @@ public class ListAdapter extends BaseAdapter {
         return view;
     }
 
-
     @Override
     public int getCount() {
         return al_users.size();

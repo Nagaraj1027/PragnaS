@@ -29,6 +29,7 @@ import com.example.pragnas.jsonparser.JSONReaderActivity;
 import com.example.pragnas.listview.ListviewActivity;
 import com.example.pragnas.radiobuttons.RadioButtonsActivity;
 import com.example.pragnas.recyclerview.RecyclerViewExample;
+import com.example.pragnas.retrofitusingjava.RetrofitExampleActivity;
 import com.example.pragnas.sensors.ProximitySensorActivity;
 import com.example.pragnas.staticfragment.StaticFragmentsActivity;
 import com.example.pragnas.volleyserevercalls.VolleyActivity;
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             btnJSONPaerser, btnVolleyLibrary, btnGotoRetrofit, btnGotoStandardMode,
             btnGotoSingleTop,
             btnGotoSingleTask,
-            btnSingleInstanceMode,btnNotifications,btnContentProviders;
+            btnSingleInstanceMode,btnNotifications,btnContentProviders,btnRetrofitUsingJava;
     Toolbar toolbar;
 
     @Override
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSingleInstanceMode = findViewById(R.id.btnSingleInstanceMode);
         btnNotifications = findViewById(R.id.btnNotifications);
         btnContentProviders = findViewById(R.id.btnContentProviders);
+        btnRetrofitUsingJava = findViewById(R.id.btnRetrofitUsingJava);
 
 
         btnExplicitIntent.setOnClickListener(this);
@@ -98,6 +100,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSingleInstanceMode.setOnClickListener(this);
         btnNotifications.setOnClickListener(this);
         btnContentProviders.setOnClickListener(this);
+        btnRetrofitUsingJava.setOnClickListener(this);
 
 /*
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -206,6 +209,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnContentProviders:
                 gotoContentProviders();
                 break;
+            case R.id.btnRetrofitUsingJava:
+                // Toast.makeText(getApplicationContext(), "Button3 Clicked", Toast.LENGTH_LONG).show();
+                gotoRetrofitUsingJava();
+                break;
         }
     }
 
@@ -313,6 +320,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     void gotoContentProviders() {
         Intent to_explicitAct = new Intent(MainActivity.this, ContentProviderActivity.class);
         startActivity(to_explicitAct);
+    }
+
+    void gotoRetrofitUsingJava() {
+        Intent to_recycler = new Intent(MainActivity.this, RetrofitExampleActivity.class);
+        startActivity(to_recycler);
     }
 
 

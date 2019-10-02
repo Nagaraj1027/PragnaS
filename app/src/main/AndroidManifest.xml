@@ -68,6 +68,7 @@
             android:name=".launchmodes.singleinstance.SingeInstanceD"
             android:launchMode="singleInstance" />
         <activity android:name=".launchmodes.singleinstance.SingeInstanceE" />
+        <activity android:name=".retrofitusingjava.RetrofitExampleActivity" />
 
         <service android:name=".notificationsFcm.MyFirebaseMessagingService">
             <intent-filter>
