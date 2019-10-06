@@ -69,6 +69,8 @@
             android:launchMode="singleInstance" />
         <activity android:name=".launchmodes.singleinstance.SingeInstanceE" />
         <activity android:name=".retrofitusingjava.RetrofitExampleActivity" />
+        <activity android:name=".serviceexample.intentservice.IntentServiceExampleActivity" />
+        <activity android:name=".serviceexample.service.ServiceExampleActivity" />
 
         <service android:name=".notificationsFcm.MyFirebaseMessagingService">
             <intent-filter>
@@ -81,6 +83,9 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
+        <service android:name=".serviceexample.intentservice.IntentServiceWithTimer" />
+        <service android:name=".serviceexample.service.ServiceWithTimer" />
+
     </application>
 
 </manifest>

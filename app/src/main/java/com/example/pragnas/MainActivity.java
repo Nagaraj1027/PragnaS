@@ -31,6 +31,8 @@ import com.example.pragnas.radiobuttons.RadioButtonsActivity;
 import com.example.pragnas.recyclerview.RecyclerViewExample;
 import com.example.pragnas.retrofitusingjava.RetrofitExampleActivity;
 import com.example.pragnas.sensors.ProximitySensorActivity;
+import com.example.pragnas.serviceexample.intentservice.IntentServiceExampleActivity;
+import com.example.pragnas.serviceexample.service.ServiceExampleActivity;
 import com.example.pragnas.staticfragment.StaticFragmentsActivity;
 import com.example.pragnas.volleyserevercalls.VolleyActivity;
 
@@ -42,7 +44,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             btnJSONPaerser, btnVolleyLibrary, btnGotoRetrofit, btnGotoStandardMode,
             btnGotoSingleTop,
             btnGotoSingleTask,
-            btnSingleInstanceMode,btnNotifications,btnContentProviders,btnRetrofitUsingJava;
+            btnSingleInstanceMode, btnNotifications, btnContentProviders, btnRetrofitUsingJava,
+            btnIntentService, btnService;
     Toolbar toolbar;
 
     @Override
@@ -76,7 +79,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNotifications = findViewById(R.id.btnNotifications);
         btnContentProviders = findViewById(R.id.btnContentProviders);
         btnRetrofitUsingJava = findViewById(R.id.btnRetrofitUsingJava);
-
+        btnIntentService = findViewById(R.id.btnIntentService);
+        btnService = findViewById(R.id.btnService);
 
         btnExplicitIntent.setOnClickListener(this);
         btn2.setOnClickListener(this);
@@ -101,7 +105,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNotifications.setOnClickListener(this);
         btnContentProviders.setOnClickListener(this);
         btnRetrofitUsingJava.setOnClickListener(this);
-
+        btnIntentService.setOnClickListener(this);
+        btnService.setOnClickListener(this);
 /*
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -213,6 +218,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // Toast.makeText(getApplicationContext(), "Button3 Clicked", Toast.LENGTH_LONG).show();
                 gotoRetrofitUsingJava();
                 break;
+
+            case R.id.btnIntentService:
+                // Toast.makeText(getApplicationContext(), "Button3 Clicked", Toast.LENGTH_LONG).show();
+                gotoIntentService();
+                break;
+
+            case R.id.btnService:
+                // Toast.makeText(getApplicationContext(), "Button3 Clicked", Toast.LENGTH_LONG).show();
+                gotoService();
+                break;
         }
     }
 
@@ -313,10 +328,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent to_explicitAct = new Intent(MainActivity.this, SingeInstanceA.class);
         startActivity(to_explicitAct);
     }
+
     void gotoNotifications() {
         Intent to_explicitAct = new Intent(MainActivity.this, NotificationActivity.class);
         startActivity(to_explicitAct);
     }
+
     void gotoContentProviders() {
         Intent to_explicitAct = new Intent(MainActivity.this, ContentProviderActivity.class);
         startActivity(to_explicitAct);
@@ -327,6 +344,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(to_recycler);
     }
 
+    void gotoIntentService() {
+        Intent to_recycler = new Intent(MainActivity.this, IntentServiceExampleActivity.class);
+        startActivity(to_recycler);
+    }
+
+    void gotoService() {
+        Intent to_recycler = new Intent(MainActivity.this, ServiceExampleActivity.class);
+        startActivity(to_recycler);
+    }
 
 
     @Override
